@@ -126,10 +126,44 @@ def main():
         ]
     )
 
-    # --- Slide 7: Golden Signal 2: Errors ---
+    # --- Slide 7: Latency p95/p99: Industry Standard ---
     add_title_and_content_slide(
         prs,
-        "Golden Signal 2: Errors (Tỷ lệ lỗi)",
+        "Latency p95/p99: Tiêu chuẩn ngành",
+        [
+            "Đối với các dịch vụ User-Facing (web/mobile app), p95 hoặc p99 latency là thước đo quan trọng nhất.",
+            "Ngưỡng tâm lý người dùng:",
+            [
+                "< 100ms: Phản hồi tức thì.",
+                "200-250ms: Vẫn cảm thấy nhanh, chấp nhận được.",
+                "> 500ms: Bắt đầu cảm thấy chậm, khó chịu.",
+                "> 1s: Mất tập trung, có nguy cơ rời bỏ."
+            ],
+            "Vì vậy, 200-250ms cho p95/p99 là tiêu chuẩn ngành cho các tác vụ chính."
+        ]
+    )
+
+    # --- Slide 8: Golden Signal 2: Traffic ---
+    add_title_and_content_slide(
+        prs,
+        "Golden Signal 2: Traffic (Lưu lượng)",
+        [
+            "Đo lường mức độ nhu cầu (demand) đang đặt lên hệ thống.",
+            "Giúp hiểu rõ quy mô và sự tăng trưởng của dịch vụ.",
+            "Cách đo lường:",
+            [
+                "Đối với API/web service: Requests Per Second (RPS).",
+                "Đối với hệ thống streaming: Events Per Second.",
+                "Đối với hệ thống e-commerce: Giao dịch mỗi phút."
+            ],
+            "Quan trọng cho việc capacity planning và phát hiện các thay đổi bất thường (vd: botnet attack)."
+        ]
+    )
+
+    # --- Slide 9: Golden Signal 3: Errors ---
+    add_title_and_content_slide(
+        prs,
+        "Golden Signal 3: Errors (Tỷ lệ lỗi)",
         [
             "Đo lường tần suất các yêu cầu bị lỗi.",
             "Bao gồm cả lỗi rõ ràng (explicit) và lỗi ngầm (implicit):",
@@ -142,10 +176,10 @@ def main():
         ]
     )
 
-    # --- Slide 8: Golden Signal 3: Saturation ---
+    # --- Slide 10: Golden Signal 4: Saturation ---
     add_title_and_content_slide(
         prs,
-        "Golden Signal 3: Saturation (Độ bão hòa)",
+        "Golden Signal 4: Saturation (Độ bão hòa)",
         [
             "Đo lường mức độ \"bận rộn\" hoặc \"đầy\" của hệ thống.",
             "Là một chỉ số dự báo (leading indicator) về các sự cố sắp xảy ra.",
@@ -160,7 +194,7 @@ def main():
         ]
     )
 
-    # --- Slide 9: SLI, SLO, SLA ---
+    # --- Slide 11: SLI, SLO, SLA ---
     add_title_and_content_slide(
         prs,
         "SLI, SLO, SLA: Nền tảng của Reliability",
@@ -188,7 +222,7 @@ def main():
         ]
     )
 
-    # --- Slide 10: Supporting Metrics ---
+    # --- Slide 12: Supporting Metrics ---
     add_title_and_content_slide(
         prs,
         "Các Metric bổ trợ quan trọng",
@@ -206,7 +240,7 @@ def main():
         ]
     )
 
-    # --- Slide 11: Summary ---
+    # --- Slide 13: Summary ---
     add_title_and_content_slide(
         prs,
         "Tổng kết",
@@ -219,7 +253,7 @@ def main():
         ]
     )
 
-    # --- Slide 12: Q&A ---
+    # --- Slide 14: Q&A ---
     slide_layout = prs.slide_layouts[0]
     slide = prs.slides.add_slide(slide_layout)
     title = slide.shapes.title
